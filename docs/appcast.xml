@@ -3,20 +3,20 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
   <channel>
     <title>PixelCloudX Updates</title>
-    <link>https://interlacedpixel.com/PixelCloudX/</link>
+    <link>https://github.com/Interlaced-Pixel/PixelCloudX</link>
     <description>Signed PixelCloudX releases from Interlaced Pixel.</description>
     <item>
       <title>PixelCloudX 1.0.0</title>
-      <pubDate>Thu, 29 Oct 2026 09:41:42 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2026 09:48:41 +0000</pubDate>
       <sparkle:version>4</sparkle:version>
       <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <link>https://github.com/Interlaced-Pixel/PixelCloudX/releases/tag/v1.0.0</link>
       <description>See the release page for changes and known limitations.</description>
-      <enclosure url="https://github.com/Interlaced-Pixel/PixelCloudX/releases/download/v1.0.0/PixelCloudX-1.0.0-arm64.zip" length="18726377" type="application/octet-stream" sparkle:edSignature="kkSArAP9zLsHpjDZOwTWc65H85Cgd/LSzdK4M59lZIwbIcJSmyg29UXcuvvAi2gMpoU+Mb8ZKHhEeig8spHDDQ=="></enclosure>
+      <enclosure url="https://github.com/Interlaced-Pixel/PixelCloudX/releases/download/v1.0.0/PixelCloudX-1.0.0-arm64.zip" length="18726337" type="application/octet-stream" sparkle:edSignature="Iy3s7VhmuLuaikTz4EUbhWdiRQD/EfBULvMVpb2t9XTKtXh89+9cj9FedYRqw+M+c5/Wun9DXT4Ek36cDoExDQ=="></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: /MyR8vEUc3niIDRL4LMFHL4anzuMTZ0Rpna0r3cCQ5f4+oCRKL17A/Ju0AUlyTSeRq3Los4vNgV1MpYsbgRYAA==
-length: 1366
+edSignature: 7tCbfuyFq/RompOUkwI1OPSclmXR3D9pIWRBhhcpPlOJ9zQvzqBCF2pbjwMqYo+0NX5z3LheilLdlLNN1IxhCQ==
+length: 1373
 -->

@@ -29,7 +29,7 @@ Catalogue metadata and public artwork are separate caches. Settings shows artwor
 
 Sparkle 2.10.1 is pinned in Swift Package Manager. The app uses the standard native updater UI with HTML release notes disabled. Installer XPC support and sandbox Mach lookup exceptions follow Sparkle's sandbox documentation. Both the appcast and update archives require Ed25519 signatures, and archive verification occurs before extraction.
 
-The feed is `https://interlacedpixel.com/PixelCloudX/appcast.xml`, deployed from `docs/site/` by GitHub Pages. Archives live in this repository's GitHub Releases. Update checks wait during a stream. If an installation was already pending when gameplay began, its relaunch waits until the stream ends.
+The signed feed is `https://github.com/Interlaced-Pixel/PixelCloudX/releases/latest/download/appcast.xml`. Both the feed and archives live in GitHub Releases; no project website is published. A source copy of the feed lives at `docs/appcast.xml`. Update checks wait during a stream. If an installation was already pending when gameplay began, its relaunch waits until the stream ends.
 
 No credentials or update-signing keys are stored in Keychain. The release key is a permissions-restricted local file outside the repository. Signing commands require an explicit key-file argument and never use a credential-store fallback. Keep a secure offline backup: loss of this key prevents signing updates trusted by existing installations.
 
@@ -40,7 +40,7 @@ bash Tests/run-regressions.sh
 scripts/release.sh "$HOME/.config/PixelCloudX/keys/sparkle-ed25519.key"
 ```
 
-The release script builds arm64, verifies the bundle signature, creates a ZIP under the existing Release products' `Distribution` directory, signs/verifies it, generates/signs/verifies the feed, and records the archive SHA-256. Publish the matching version tag and archive before deploying the new feed. Never modify a signed feed without signing it again.
+The release script builds arm64, verifies the bundle signature, creates a ZIP under the existing Release products' `Distribution` directory, signs/verifies it, generates/signs/verifies the feed, and records the archive SHA-256. Publish the matching version tag and archive together with the matching signed feed. Never modify a signed feed without signing it again.
 
 The initial distribution is ad-hoc signed and **not notarized**. macOS may block downloaded copies. Sparkle's Ed25519 signatures establish update authenticity; they do not substitute for Apple Developer ID signing or notarization.
 

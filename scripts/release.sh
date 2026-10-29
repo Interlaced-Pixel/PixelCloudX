@@ -40,7 +40,7 @@ S='http://www.andymatuschak.org/xml-namespaces/sparkle'
 E.register_namespace('sparkle',S)
 root=E.Element('rss',version='2.0');channel=E.SubElement(root,'channel')
 E.SubElement(channel,'title').text='PixelCloudX Updates'
-E.SubElement(channel,'link').text='https://interlacedpixel.com/PixelCloudX/'
+E.SubElement(channel,'link').text='https://github.com/Interlaced-Pixel/PixelCloudX'
 E.SubElement(channel,'description').text='Signed PixelCloudX releases from Interlaced Pixel.'
 item=E.SubElement(channel,'item')
 E.SubElement(item,'title').text=f'PixelCloudX {version}'
@@ -53,10 +53,13 @@ E.SubElement(item,'description').text='See the release page for changes and know
 E.SubElement(item,'enclosure',{'url':f'https://github.com/Interlaced-Pixel/PixelCloudX/releases/download/v{version}/{pathlib.Path(archive).name}',
     'length':str(pathlib.Path(archive).stat().st_size),'type':'application/octet-stream',f'{{{S}}}edSignature':signature})
 E.indent(root)
-E.ElementTree(root).write('docs/site/appcast.xml',encoding='utf-8',xml_declaration=True)
+E.ElementTree(root).write('docs/appcast.xml',encoding='utf-8',xml_declaration=True)
 PY
-"$signer" --ed-key-file "$key_file" docs/site/appcast.xml
-"$signer" --ed-key-file "$key_file" --verify docs/site/appcast.xml
-shasum -a 256 "$archive" > "$archive.sha256"
+"$signer" --ed-key-file "$key_file" docs/appcast.xml
+"$signer" --ed-key-file "$key_file" --verify docs/appcast.xml
+(
+  cd "$(dirname "$archive")"
+  shasum -a 256 "$(basename "$archive")"
+) > "$archive.sha256"
 after="$(du -sk "$data_root" | awk '{print $1}')"
 printf 'Archive: %s\nDerivedData: %s\nSize: %s -> %s KiB (%+d KiB)\n' "$archive" "$data_root" "$before" "$after" "$((after-before))"

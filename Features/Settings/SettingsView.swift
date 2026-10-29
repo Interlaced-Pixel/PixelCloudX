@@ -95,7 +95,7 @@ struct PixelCloudXSettingsView: View {
                 LabeledContent("Version", value: Self.version)
                 Text("Native Xbox cloud streaming for Apple silicon. Xbox endpoints are private and may change; PixelCloudX is not affiliated with Microsoft.").font(.caption).foregroundStyle(.secondary)
                 HStack {
-                    Link("Project website", destination: AppLinks.website)
+                    Link("Project page", destination: AppLinks.website)
                     Spacer()
                     Link("Source & issues", destination: AppLinks.repository)
                 }
@@ -243,7 +243,7 @@ struct PixelCloudXSettingsView: View {
 }
 
 enum AppLinks {
-    static let website = URL(string: "https://interlacedpixel.com/PixelCloudX/")!
+    static let website = URL(string: "https://github.com/Interlaced-Pixel/PixelCloudX")!
     static let repository = URL(string: "https://github.com/Interlaced-Pixel/PixelCloudX")!
     static let releases = repository.appendingPathComponent("releases")
     static let issues = repository.appendingPathComponent("issues")

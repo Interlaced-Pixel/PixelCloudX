@@ -39,7 +39,7 @@
 	<key>SUEnableSystemProfiling</key>
 	<false/>
 	<key>SUFeedURL</key>
-	<string>https://interlacedpixel.com/PixelCloudX/appcast.xml</string>
+	<string>https://github.com/Interlaced-Pixel/PixelCloudX/releases/latest/download/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>abwZafIgaw+ylJGgqMH6FbDjxKD531gWhalp/LhB1bw=</string>
 	<key>SURequireSignedFeed</key>

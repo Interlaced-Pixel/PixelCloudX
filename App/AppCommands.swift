@@ -39,7 +39,7 @@ struct PixelCloudXCommands: Commands {
             Button("End Stream") { Task { await stream.stop() } }.disabled(!stream.isActive)
         }
         CommandGroup(replacing: .help) {
-            Link("PixelCloudX Website", destination: AppLinks.website)
+            Link("PixelCloudX on GitHub", destination: AppLinks.website)
             Link("Report an Issue", destination: AppLinks.issues)
             Link("Source and Documentation", destination: AppLinks.repository)
         }
