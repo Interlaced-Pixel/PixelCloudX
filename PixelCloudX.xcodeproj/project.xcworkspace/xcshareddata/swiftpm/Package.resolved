@@ -1,0 +1,24 @@
+{
+  "originHash" : "1988f0b7e5e59fbd98d30e2a2549a329a0fabc3ecc26cfb4e390d43b95239c68",
+  "pins" : [
+    {
+      "identity" : "sparkle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparkle-project/Sparkle",
+      "state" : {
+        "revision" : "ab7d71291238df6e0492143b120c9b696a35f603",
+        "version" : "2.10.1"
+      }
+    },
+    {
+      "identity" : "webrtc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stasel/WebRTC",
+      "state" : {
+        "revision" : "44f36788497f701bc8c0306de3a1c2511d56019d",
+        "version" : "155.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

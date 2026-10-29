@@ -1,0 +1,14 @@
+.DS_Store
+graphify-out/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.log
+*.zip
+*.dmg
+*.key
+*.pem
+*.p12
+*.p8
+.env*
